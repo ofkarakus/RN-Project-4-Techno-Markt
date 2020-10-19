@@ -55,7 +55,7 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'white',
+    backgroundColor: '#fafafa',
     flex: 1,
   },
   banner: {

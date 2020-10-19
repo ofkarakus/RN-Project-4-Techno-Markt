@@ -18,9 +18,10 @@ const SearchBar = (props) => {
 const styles = StyleSheet.create({
   inputContainer: {
     margin: 10,
-    borderColor: 'gray',
+    borderColor: 'lightgray',
     borderWidth: 1,
     borderRadius: 5,
+    backgroundColor: 'white'
   },
   textInput: {
     paddingHorizontal: 8,
