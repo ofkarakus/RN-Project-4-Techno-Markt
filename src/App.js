@@ -26,7 +26,7 @@ const App = () => {
 
   useEffect(() => {
     setFilteredProductList(
-      productData.filter((item) => {
+      productData.filter(item => {
         const searchedValue = search.toLowerCase();
         const itemTitle = item.title.toLowerCase();
 
@@ -36,11 +36,11 @@ const App = () => {
   }, [search]);
 
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={{flex: 1}}>
+    <SafeAreaView style={styles.safeAreaView}>
+      <View style={styles.container}>
         <Text style={styles.banner}>TechnoMarkt</Text>
 
-        <SearchBar sendText={(value) => setSearch(value)} />
+        <SearchBar sendText={value => setSearch(value)} />
 
         <FlatList
           keyExtractor={(_, index) => index.toString()}
@@ -54,8 +54,11 @@ const App = () => {
 };
 
 const styles = StyleSheet.create({
-  container: {
+  safeAreaView: {
     backgroundColor: '#fafafa',
+    flex: 1,
+  },
+  container: {
     flex: 1,
   },
   banner: {
@@ -63,6 +66,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 40,
     textAlign: 'center',
+    marginTop: 5,
   },
 });
 
